@@ -38,6 +38,7 @@ def load_dataset() -> pd.DataFrame:
   df["lat"] = pd.to_numeric(df["lat"], errors="coerce")
   df["lon"] = pd.to_numeric(df["lon"], errors="coerce")
   df["intensity"] = pd.to_numeric(df.get("intensity"), errors="coerce")
+  df["crime_type"] = df.get("crime_type", pd.Series(dtype=str)).astype(str).str.strip()
 
   # Parse date/time fields
   df["date"] = pd.to_datetime(df["date"], errors="coerce").dt.date
@@ -45,6 +46,8 @@ def load_dataset() -> pd.DataFrame:
 
   # Drop rows without essential coordinates or date
   df = df.dropna(subset=["lat", "lon", "date"])
+  df = df[df["crime_type"].str.lower() != "general"]
+  df = df[df["crime_type"].str.len() > 0]
 
   # Replace missing intensity with 1.0 baseline
   df["intensity"] = df["intensity"].fillna(1.0)

@@ -1,25 +1,49 @@
 City,Area,lat,lon,crime_type,date,time,intensity
 Delhi,Connaught Place,28.6329,77.2193,Theft,2025-01-15,14:30,0.7
-Delhi,Chandni Chowk,28.6562,77.2410,Snatching,2025-01-15,18:45,0.8
-Delhi,Karol Bagh,28.6508,77.1910,Pickpocketing,2025-01-15,12:10,0.6
+Delhi,Chandni Chowk,28.6562,77.241,Snatching,2025-01-15,18:45,0.8
+Delhi,Karol Bagh,28.6508,77.191,Pickpocketing,2025-01-15,12:10,0.6
 Delhi,Nehru Place,28.5492,77.2502,Vehicle Theft,2025-01-15,16:00,0.9
 Delhi,Saket,28.5284,77.2185,Burglary,2025-01-15,02:15,0.8
 Delhi,Hauz Khas Village,28.5539,77.1942,Fighting,2025-01-15,23:45,0.9
-Delhi,New Delhi Railway Station,28.6427,77.2201,Robbery,2025-01-15,01:30,1.0
+Delhi,New Delhi Railway Station,28.6427,77.2201,Robbery,2025-01-15,01:30,1
 Delhi,Anand Vihar ISBT,28.6496,77.3155,Harassment,2025-01-15,20:00,0.7
 Delhi,Okhla Industrial Area,28.5376,77.2882,Vandalism,2025-01-15,22:10,0.5
 Delhi,Rohini,28.7142,77.1001,Chain Snatching,2025-01-15,19:30,0.8
-Delhi,Dwarka,28.5921,77.0460,Abuse,2025-01-15,17:45,0.6
+Delhi,Dwarka,28.5921,77.046,Abuse,2025-01-15,17:45,0.6
+Delhi,Paharganj,28.6445,77.2118,Scam,2025-01-15,11:00,0.4
+Delhi,Connaught Place,28.6329,77.2193,Theft,2025-01-15,14:30,0.7
+Delhi,Chandni Chowk,28.6562,77.241,Snatching,2025-01-15,18:45,0.8
+Delhi,Karol Bagh,28.6508,77.191,Pickpocketing,2025-01-15,12:10,0.6
+Delhi,Nehru Place,28.5492,77.2502,Vehicle Theft,2025-01-15,16:00,0.9
+Delhi,Saket,28.5284,77.2185,Burglary,2025-01-15,02:15,0.8
+Delhi,Hauz Khas Village,28.5539,77.1942,Fighting,2025-01-15,23:45,0.9
+Delhi,New Delhi Railway Station,28.6427,77.2201,Robbery,2025-01-15,01:30,1
+Delhi,Anand Vihar ISBT,28.6496,77.3155,Harassment,2025-01-15,20:00,0.7
+Delhi,Okhla Industrial Area,28.5376,77.2882,Vandalism,2025-01-15,22:10,0.5
+Delhi,Rohini,28.7142,77.1001,Chain Snatching,2025-01-15,19:30,0.8
+Delhi,Dwarka,28.5921,77.046,Abuse,2025-01-15,17:45,0.6
 Delhi,Paharganj,28.6445,77.2118,Scam,2025-01-15,11:00,0.4
 Delhi,Connaught Place,28.6325,77.2201,Assault,2025-01-16,21:50,0.9
 Delhi,Chandni Chowk,28.6555,77.2415,Fighting,2025-01-16,13:20,0.8
 Delhi,Karol Bagh,28.6515,77.1905,Theft,2025-01-16,15:00,0.7
 Delhi,Nehru Place,28.5495,77.2505,Fraud,2025-01-16,12:45,0.5
-Delhi,Saket,28.5280,77.2190,Harassment,2025-01-16,20:30,0.7
-Delhi,Hauz Khas Village,28.5542,77.1945,Assault,2025-01-16,00:30,1.0
-Delhi,New Delhi Railway Station,28.6430,77.2205,Pickpocketing,2025-01-16,08:00,0.6
+Delhi,Saket,28.528,77.219,Harassment,2025-01-16,20:30,0.7
+Delhi,Hauz Khas Village,28.5542,77.1945,Assault,2025-01-16,00:30,1
+Delhi,New Delhi Railway Station,28.643,77.2205,Pickpocketing,2025-01-16,08:00,0.6
 Delhi,Anand Vihar ISBT,28.6499,77.3159,Theft,2025-01-16,11:20,0.7
-Delhi,Okhla Industrial Area,28.5379,77.2885,Robbery,2025-01-16,03:00,1.0
+Delhi,Okhla Industrial Area,28.5379,77.2885,Robbery,2025-01-16,03:00,1
+Delhi,Rohini,28.7145,77.1004,Vehicle Theft,2025-01-16,01:45,0.9
+Delhi,Dwarka,28.5924,77.0463,Burglary,2025-01-16,02:30,0.8
+Delhi,Paharganj,28.6448,77.2121,Drug Peddling,2025-01-16,16:50,0.8
+Delhi,Connaught Place,28.6325,77.2201,Assault,2025-01-16,21:50,0.9
+Delhi,Chandni Chowk,28.6555,77.2415,Fighting,2025-01-16,13:20,0.8
+Delhi,Karol Bagh,28.6515,77.1905,Theft,2025-01-16,15:00,0.7
+Delhi,Nehru Place,28.5495,77.2505,Fraud,2025-01-16,12:45,0.5
+Delhi,Saket,28.528,77.219,Harassment,2025-01-16,20:30,0.7
+Delhi,Hauz Khas Village,28.5542,77.1945,Assault,2025-01-16,00:30,1
+Delhi,New Delhi Railway Station,28.643,77.2205,Pickpocketing,2025-01-16,08:00,0.6
+Delhi,Anand Vihar ISBT,28.6499,77.3159,Theft,2025-01-16,11:20,0.7
+Delhi,Okhla Industrial Area,28.5379,77.2885,Robbery,2025-01-16,03:00,1
 Delhi,Rohini,28.7145,77.1004,Vehicle Theft,2025-01-16,01:45,0.9
 Delhi,Dwarka,28.5924,77.0463,Burglary,2025-01-16,02:30,0.8
 Delhi,Paharganj,28.6448,77.2121,Drug Peddling,2025-01-16,16:50,0.8
@@ -28,13 +52,25 @@ Delhi,Chandni Chowk,28.6564,77.2412,Harassment,2025-01-17,14:00,0.7
 Delhi,Karol Bagh,28.6511,77.1912,Abuse,2025-01-17,16:30,0.6
 Delhi,Nehru Place,28.5491,77.2501,Theft,2025-01-17,11:00,0.7
 Delhi,Saket,28.5282,77.2187,Assault,2025-01-17,22:00,0.9
-Delhi,Hauz Khas Village,28.5537,77.1940,Fighting,2025-01-17,23:00,0.9
+Delhi,Hauz Khas Village,28.5537,77.194,Fighting,2025-01-17,23:00,0.9
 Delhi,New Delhi Railway Station,28.6425,77.2199,Snatching,2025-01-17,19:15,0.8
 Delhi,Anand Vihar ISBT,28.6494,77.3153,Pickpocketing,2025-01-17,15:45,0.6
-Delhi,Okhla Industrial Area,28.5374,77.2880,Assault,2025-01-17,21:00,0.9
-Delhi,Rohini,28.7140,77.0999,Harassment,2025-01-17,20:00,0.7
-Delhi,Dwarka,28.5920,77.0459,Theft,2025-01-17,13:00,0.7
-Delhi,Paharganj,28.6443,77.2116,Robbery,2025-01-17,04:00,1.0
+Delhi,Okhla Industrial Area,28.5374,77.288,Assault,2025-01-17,21:00,0.9
+Delhi,Rohini,28.714,77.0999,Harassment,2025-01-17,20:00,0.7
+Delhi,Dwarka,28.592,77.0459,Theft,2025-01-17,13:00,0.7
+Delhi,Paharganj,28.6443,77.2116,Robbery,2025-01-17,04:00,1
+Delhi,Connaught Place,28.6331,77.2195,Snatching,2025-01-17,17:00,0.8
+Delhi,Chandni Chowk,28.6564,77.2412,Harassment,2025-01-17,14:00,0.7
+Delhi,Karol Bagh,28.6511,77.1912,Abuse,2025-01-17,16:30,0.6
+Delhi,Nehru Place,28.5491,77.2501,Theft,2025-01-17,11:00,0.7
+Delhi,Saket,28.5282,77.2187,Assault,2025-01-17,22:00,0.9
+Delhi,Hauz Khas Village,28.5537,77.194,Fighting,2025-01-17,23:00,0.9
+Delhi,New Delhi Railway Station,28.6425,77.2199,Snatching,2025-01-17,19:15,0.8
+Delhi,Anand Vihar ISBT,28.6494,77.3153,Pickpocketing,2025-01-17,15:45,0.6
+Delhi,Okhla Industrial Area,28.5374,77.288,Assault,2025-01-17,21:00,0.9
+Delhi,Rohini,28.714,77.0999,Harassment,2025-01-17,20:00,0.7
+Delhi,Dwarka,28.592,77.0459,Theft,2025-01-17,13:00,0.7
+Delhi,Paharganj,28.6443,77.2116,Robbery,2025-01-17,04:00,1
 Delhi,Lajpat Nagar,28.5678,77.2427,Snatching,2025-01-18,17:30,0.8
 Delhi,Greater Kailash,28.5496,77.2345,Burglary,2025-01-18,03:15,0.9
 Delhi,Vasant Kunj,28.5262,77.1558,Vehicle Theft,2025-01-18,01:00,0.9
@@ -44,11 +80,31 @@ Delhi,Tilak Nagar,28.6369,77.0991,Fighting,2025-01-18,21:00,0.8
 Delhi,Laxmi Nagar,28.6346,77.2721,Theft,2025-01-18,14:00,0.7
 Delhi,Mukherjee Nagar,28.7077,77.2057,Abuse,2025-01-18,16:00,0.6
 Delhi,Chanakyapuri,28.5966,77.1873,Vandalism,2025-01-18,23:50,0.5
-Delhi,Mehrauli,28.5204,77.1813,Robbery,2025-01-18,02:00,1.0
+Delhi,Mehrauli,28.5204,77.1813,Robbery,2025-01-18,02:00,1
+Delhi,Lajpat Nagar,28.5678,77.2427,Snatching,2025-01-18,17:30,0.8
+Delhi,Greater Kailash,28.5496,77.2345,Burglary,2025-01-18,03:15,0.9
+Delhi,Vasant Kunj,28.5262,77.1558,Vehicle Theft,2025-01-18,01:00,0.9
+Delhi,Mayur Vihar,28.6083,77.2949,Assault,2025-01-18,22:30,0.9
+Delhi,Pitampura,28.7001,77.1432,Harassment,2025-01-18,19:45,0.7
+Delhi,Tilak Nagar,28.6369,77.0991,Fighting,2025-01-18,21:00,0.8
+Delhi,Laxmi Nagar,28.6346,77.2721,Theft,2025-01-18,14:00,0.7
+Delhi,Mukherjee Nagar,28.7077,77.2057,Abuse,2025-01-18,16:00,0.6
+Delhi,Chanakyapuri,28.5966,77.1873,Vandalism,2025-01-18,23:50,0.5
+Delhi,Mehrauli,28.5204,77.1813,Robbery,2025-01-18,02:00,1
 Delhi,Sarojini Nagar,28.5777,77.1925,Pickpocketing,2025-01-19,15:30,0.6
-Delhi,Khan Market,28.6001,77.2270,Scam,2025-01-19,13:00,0.4
+Delhi,Khan Market,28.6001,77.227,Scam,2025-01-19,13:00,0.4
 Delhi,India Gate,28.6129,77.2295,Harassment,2025-01-19,20:15,0.7
-Delhi,IIT Delhi,28.5450,77.1926,Theft,2025-01-19,11:45,0.7
+Delhi,IIT Delhi,28.545,77.1926,Theft,2025-01-19,11:45,0.7
+Delhi,JNU,28.5422,77.1643,Fighting,2025-01-19,22:00,0.8
+Delhi,Delhi University,28.6874,77.2117,Snatching,2025-01-19,17:00,0.8
+Delhi,Akshardham,28.6127,77.2773,Vehicle Theft,2025-01-19,16:30,0.9
+Delhi,Lotus Temple,28.5535,77.2588,Pickpocketing,2025-01-19,12:00,0.6
+Delhi,Qutub Minar,28.5245,77.1855,Harassment,2025-01-19,14:50,0.7
+Delhi,Humayun's Tomb,28.5933,77.2507,Theft,2025-01-19,10:30,0.7
+Delhi,Sarojini Nagar,28.5777,77.1925,Pickpocketing,2025-01-19,15:30,0.6
+Delhi,Khan Market,28.6001,77.227,Scam,2025-01-19,13:00,0.4
+Delhi,India Gate,28.6129,77.2295,Harassment,2025-01-19,20:15,0.7
+Delhi,IIT Delhi,28.545,77.1926,Theft,2025-01-19,11:45,0.7
 Delhi,JNU,28.5422,77.1643,Fighting,2025-01-19,22:00,0.8
 Delhi,Delhi University,28.6874,77.2117,Snatching,2025-01-19,17:00,0.8
 Delhi,Akshardham,28.6127,77.2773,Vehicle Theft,2025-01-19,16:30,0.9
@@ -58,27 +114,59 @@ Delhi,Humayun's Tomb,28.5933,77.2507,Theft,2025-01-19,10:30,0.7
 Delhi,Connaught Place,28.6328,77.2192,Pickpocketing,2025-01-20,13:00,0.6
 Delhi,Chandni Chowk,28.6561,77.2409,Theft,2025-01-20,16:20,0.7
 Delhi,Karol Bagh,28.6507,77.1909,Snatching,2025-01-20,19:00,0.8
-Delhi,Nehru Place,28.5490,77.2500,Scam,2025-01-20,14:15,0.4
+Delhi,Nehru Place,28.549,77.25,Scam,2025-01-20,14:15,0.4
 Delhi,Saket,28.5283,77.2184,Vehicle Theft,2025-01-20,23:00,0.9
 Delhi,Hauz Khas Village,28.5538,77.1941,Abuse,2025-01-20,21:30,0.6
-Delhi,New Delhi Railway Station,28.6426,77.2200,Harassment,2025-01-20,10:00,0.7
+Delhi,New Delhi Railway Station,28.6426,77.22,Harassment,2025-01-20,10:00,0.7
 Delhi,Anand Vihar ISBT,28.6495,77.3154,Fighting,2025-01-20,17:45,0.8
 Delhi,Okhla Industrial Area,28.5375,77.2881,Theft,2025-01-20,12:00,0.7
-Delhi,Rohini,28.7141,77.1000,Burglary,2025-01-20,03:30,0.8
+Delhi,Rohini,28.7141,77.1,Burglary,2025-01-20,03:30,0.8
+Delhi,Dwarka,28.5922,77.0461,Assault,2025-01-20,22:15,0.9
+Delhi,Paharganj,28.6444,77.2117,Pickpocketing,2025-01-20,09:30,0.6
+Delhi,Connaught Place,28.6328,77.2192,Pickpocketing,2025-01-20,13:00,0.6
+Delhi,Chandni Chowk,28.6561,77.2409,Theft,2025-01-20,16:20,0.7
+Delhi,Karol Bagh,28.6507,77.1909,Snatching,2025-01-20,19:00,0.8
+Delhi,Nehru Place,28.549,77.25,Scam,2025-01-20,14:15,0.4
+Delhi,Saket,28.5283,77.2184,Vehicle Theft,2025-01-20,23:00,0.9
+Delhi,Hauz Khas Village,28.5538,77.1941,Abuse,2025-01-20,21:30,0.6
+Delhi,New Delhi Railway Station,28.6426,77.22,Harassment,2025-01-20,10:00,0.7
+Delhi,Anand Vihar ISBT,28.6495,77.3154,Fighting,2025-01-20,17:45,0.8
+Delhi,Okhla Industrial Area,28.5375,77.2881,Theft,2025-01-20,12:00,0.7
+Delhi,Rohini,28.7141,77.1,Burglary,2025-01-20,03:30,0.8
 Delhi,Dwarka,28.5922,77.0461,Assault,2025-01-20,22:15,0.9
 Delhi,Paharganj,28.6444,77.2117,Pickpocketing,2025-01-20,09:30,0.6
 Delhi,Lajpat Nagar,28.5677,77.2426,Theft,2025-01-21,15:00,0.7
 Delhi,Greater Kailash,28.5495,77.2344,Vehicle Theft,2025-01-21,02:00,0.9
 Delhi,Vasant Kunj,28.5261,77.1557,Harassment,2025-01-21,20:45,0.7
 Delhi,Mayur Vihar,28.6082,77.2948,Fighting,2025-01-21,23:00,0.8
-Delhi,Pitampura,28.7000,77.1431,Snatching,2025-01-21,18:30,0.8
-Delhi,Tilak Nagar,28.6368,77.0990,Assault,2025-01-21,20:15,0.9
-Delhi,Laxmi Nagar,28.6345,77.2720,Abuse,2025-01-21,17:00,0.6
+Delhi,Pitampura,28.7,77.1431,Snatching,2025-01-21,18:30,0.8
+Delhi,Tilak Nagar,28.6368,77.099,Assault,2025-01-21,20:15,0.9
+Delhi,Laxmi Nagar,28.6345,77.272,Abuse,2025-01-21,17:00,0.6
 Delhi,Mukherjee Nagar,28.7076,77.2056,Theft,2025-01-21,13:30,0.7
-Delhi,Chanakyapuri,28.5965,77.1872,Robbery,2025-01-21,01:00,1.0
+Delhi,Chanakyapuri,28.5965,77.1872,Robbery,2025-01-21,01:00,1
+Delhi,Mehrauli,28.5203,77.1812,Fighting,2025-01-21,21:45,0.8
+Delhi,Lajpat Nagar,28.5677,77.2426,Theft,2025-01-21,15:00,0.7
+Delhi,Greater Kailash,28.5495,77.2344,Vehicle Theft,2025-01-21,02:00,0.9
+Delhi,Vasant Kunj,28.5261,77.1557,Harassment,2025-01-21,20:45,0.7
+Delhi,Mayur Vihar,28.6082,77.2948,Fighting,2025-01-21,23:00,0.8
+Delhi,Pitampura,28.7,77.1431,Snatching,2025-01-21,18:30,0.8
+Delhi,Tilak Nagar,28.6368,77.099,Assault,2025-01-21,20:15,0.9
+Delhi,Laxmi Nagar,28.6345,77.272,Abuse,2025-01-21,17:00,0.6
+Delhi,Mukherjee Nagar,28.7076,77.2056,Theft,2025-01-21,13:30,0.7
+Delhi,Chanakyapuri,28.5965,77.1872,Robbery,2025-01-21,01:00,1
 Delhi,Mehrauli,28.5203,77.1812,Fighting,2025-01-21,21:45,0.8
 Delhi,Sarojini Nagar,28.5776,77.1924,Theft,2025-01-22,16:00,0.7
-Delhi,Khan Market,28.6000,77.2269,Vehicle Theft,2025-01-22,19:00,0.9
+Delhi,Khan Market,28.6,77.2269,Vehicle Theft,2025-01-22,19:00,0.9
+Delhi,India Gate,28.6128,77.2294,Snatching,2025-01-22,18:00,0.8
+Delhi,IIT Delhi,28.5449,77.1925,Burglary,2025-01-22,02:45,0.8
+Delhi,JNU,28.5421,77.1642,Harassment,2025-01-22,15:00,0.7
+Delhi,Delhi University,28.6873,77.2116,Assault,2025-01-22,23:30,0.9
+Delhi,Akshardham,28.6126,77.2772,Pickpocketing,2025-01-22,11:00,0.6
+Delhi,Lotus Temple,28.5534,77.2587,Theft,2025-01-22,14:15,0.7
+Delhi,Qutub Minar,28.5244,77.1854,Abuse,2025-01-22,13:30,0.6
+Delhi,Humayun's Tomb,28.5932,77.2506,Scam,2025-01-22,10:00,0.4
+Delhi,Sarojini Nagar,28.5776,77.1924,Theft,2025-01-22,16:00,0.7
+Delhi,Khan Market,28.6,77.2269,Vehicle Theft,2025-01-22,19:00,0.9
 Delhi,India Gate,28.6128,77.2294,Snatching,2025-01-22,18:00,0.8
 Delhi,IIT Delhi,28.5449,77.1925,Burglary,2025-01-22,02:45,0.8
 Delhi,JNU,28.5421,77.1642,Harassment,2025-01-22,15:00,0.7
@@ -91,8 +179,20 @@ Delhi,Connaught Place,28.6332,77.2196,Fighting,2025-01-23,19:45,0.8
 Delhi,Chandni Chowk,28.6565,77.2413,Pickpocketing,2025-01-23,12:30,0.6
 Delhi,Karol Bagh,28.6512,77.1913,Harassment,2025-01-23,18:00,0.7
 Delhi,Nehru Place,28.5492,77.2502,Assault,2025-01-23,21:00,0.9
-Delhi,Saket,28.5285,77.2188,Robbery,2025-01-23,01:30,1.0
-Delhi,Hauz Khas Village,28.5540,77.1943,Theft,2025-01-23,15:30,0.7
+Delhi,Saket,28.5285,77.2188,Robbery,2025-01-23,01:30,1
+Delhi,Hauz Khas Village,28.554,77.1943,Theft,2025-01-23,15:30,0.7
+Delhi,New Delhi Railway Station,28.6428,77.2202,Abuse,2025-01-23,16:00,0.6
+Delhi,Anand Vihar ISBT,28.6497,77.3156,Vehicle Theft,2025-01-23,04:00,0.9
+Delhi,Okhla Industrial Area,28.5377,77.2883,Snatching,2025-01-23,20:30,0.8
+Delhi,Rohini,28.7143,77.1002,Fighting,2025-01-23,22:45,0.8
+Delhi,Dwarka,28.5923,77.0462,Vandalism,2025-01-23,00:15,0.5
+Delhi,Paharganj,28.6446,77.2119,Drug Peddling,2025-01-23,17:30,0.8
+Delhi,Connaught Place,28.6332,77.2196,Fighting,2025-01-23,19:45,0.8
+Delhi,Chandni Chowk,28.6565,77.2413,Pickpocketing,2025-01-23,12:30,0.6
+Delhi,Karol Bagh,28.6512,77.1913,Harassment,2025-01-23,18:00,0.7
+Delhi,Nehru Place,28.5492,77.2502,Assault,2025-01-23,21:00,0.9
+Delhi,Saket,28.5285,77.2188,Robbery,2025-01-23,01:30,1
+Delhi,Hauz Khas Village,28.554,77.1943,Theft,2025-01-23,15:30,0.7
 Delhi,New Delhi Railway Station,28.6428,77.2202,Abuse,2025-01-23,16:00,0.6
 Delhi,Anand Vihar ISBT,28.6497,77.3156,Vehicle Theft,2025-01-23,04:00,0.9
 Delhi,Okhla Industrial Area,28.5377,77.2883,Snatching,2025-01-23,20:30,0.8
@@ -102,16 +202,26 @@ Delhi,Paharganj,28.6446,77.2119,Drug Peddling,2025-01-23,17:30,0.8
 Delhi,Lajpat Nagar,28.5679,77.2428,Pickpocketing,2025-01-24,16:45,0.6
 Delhi,Greater Kailash,28.5497,77.2346,Harassment,2025-01-24,20:00,0.7
 Delhi,Vasant Kunj,28.5263,77.1559,Assault,2025-01-24,23:15,0.9
-Delhi,Mayur Vihar,28.6084,77.2950,Theft,2025-01-24,11:30,0.7
+Delhi,Mayur Vihar,28.6084,77.295,Theft,2025-01-24,11:30,0.7
 Delhi,Pitampura,28.7002,77.1433,Burglary,2025-01-24,03:00,0.8
-Delhi,Tilak Nagar,28.6370,77.0992,Snatching,2025-01-24,19:15,0.8
-Delhi,Laxmi Nagar,28.6347,77.2722,Robbery,2025-01-24,01:45,1.0
+Delhi,Tilak Nagar,28.637,77.0992,Snatching,2025-01-24,19:15,0.8
+Delhi,Laxmi Nagar,28.6347,77.2722,Robbery,2025-01-24,01:45,1
+Delhi,Mukherjee Nagar,28.7078,77.2058,Fighting,2025-01-24,18:00,0.8
+Delhi,Chanakyapuri,28.5967,77.1874,Vehicle Theft,2025-01-24,22:00,0.9
+Delhi,Mehrauli,28.5205,77.1814,Abuse,2025-01-24,15:45,0.6
+Delhi,Lajpat Nagar,28.5679,77.2428,Pickpocketing,2025-01-24,16:45,0.6
+Delhi,Greater Kailash,28.5497,77.2346,Harassment,2025-01-24,20:00,0.7
+Delhi,Vasant Kunj,28.5263,77.1559,Assault,2025-01-24,23:15,0.9
+Delhi,Mayur Vihar,28.6084,77.295,Theft,2025-01-24,11:30,0.7
+Delhi,Pitampura,28.7002,77.1433,Burglary,2025-01-24,03:00,0.8
+Delhi,Tilak Nagar,28.637,77.0992,Snatching,2025-01-24,19:15,0.8
+Delhi,Laxmi Nagar,28.6347,77.2722,Robbery,2025-01-24,01:45,1
 Delhi,Mukherjee Nagar,28.7078,77.2058,Fighting,2025-01-24,18:00,0.8
 Delhi,Chanakyapuri,28.5967,77.1874,Vehicle Theft,2025-01-24,22:00,0.9
 Delhi,Mehrauli,28.5205,77.1814,Abuse,2025-01-24,15:45,0.6
 Delhi,Sarojini Nagar,28.5778,77.1926,Harassment,2025-01-25,17:00,0.7
 Delhi,Khan Market,28.6002,77.2271,Theft,2025-01-25,14:30,0.7
-Delhi,India Gate,28.6130,77.2296,Vandalism,2025-01-25,21:30,0.5
+Delhi,India Gate,28.613,77.2296,Vandalism,2025-01-25,21:30,0.5
 Delhi,IIT Delhi,28.5451,77.1927,Snatching,2025-01-25,16:00,0.8
 Delhi,JNU,28.5423,77.1644,Assault,2025-01-25,23:45,0.9
 Delhi,Delhi University,28.6875,77.2118,Pickpocketing,2025-01-25,12:45,0.6
@@ -119,7 +229,17 @@ Delhi,Akshardham,28.6128,77.2774,Harassment,2025-01-25,19:00,0.7
 Delhi,Lotus Temple,28.5536,77.2589,Scam,2025-01-25,11:15,0.4
 Delhi,Qutub Minar,28.5246,77.1856,Theft,2025-01-25,13:00,0.7
 Delhi,Humayun's Tomb,28.5934,77.2508,Fighting,2025-01-25,17:30,0.8
-Delhi,Connaught Place,28.6333,77.2197,Robbery,2025-01-26,00:30,1.0
+Delhi,Sarojini Nagar,28.5778,77.1926,Harassment,2025-01-25,17:00,0.7
+Delhi,Khan Market,28.6002,77.2271,Theft,2025-01-25,14:30,0.7
+Delhi,India Gate,28.613,77.2296,Vandalism,2025-01-25,21:30,0.5
+Delhi,IIT Delhi,28.5451,77.1927,Snatching,2025-01-25,16:00,0.8
+Delhi,JNU,28.5423,77.1644,Assault,2025-01-25,23:45,0.9
+Delhi,Delhi University,28.6875,77.2118,Pickpocketing,2025-01-25,12:45,0.6
+Delhi,Akshardham,28.6128,77.2774,Harassment,2025-01-25,19:00,0.7
+Delhi,Lotus Temple,28.5536,77.2589,Scam,2025-01-25,11:15,0.4
+Delhi,Qutub Minar,28.5246,77.1856,Theft,2025-01-25,13:00,0.7
+Delhi,Humayun's Tomb,28.5934,77.2508,Fighting,2025-01-25,17:30,0.8
+Delhi,Connaught Place,28.6333,77.2197,Robbery,2025-01-26,00:30,1
 Delhi,Chandni Chowk,28.6566,77.2414,Vehicle Theft,2025-01-26,05:00,0.9
 Delhi,Karol Bagh,28.6513,77.1914,Burglary,2025-01-26,02:15,0.8
 Delhi,Nehru Place,28.5493,77.2503,Fighting,2025-01-26,18:30,0.8
@@ -130,10 +250,32 @@ Delhi,Anand Vihar ISBT,28.6498,77.3157,Assault,2025-01-26,21:15,0.9
 Delhi,Okhla Industrial Area,28.5378,77.2884,Abuse,2025-01-26,15:00,0.6
 Delhi,Rohini,28.7144,77.1003,Vandalism,2025-01-26,23:00,0.5
 Delhi,Dwarka,28.5925,77.0464,Harassment,2025-01-26,19:30,0.7
-Delhi,Paharganj,28.6447,77.2120,Snatching,2025-01-26,10:45,0.8
-Delhi,Lajpat Nagar,28.5680,77.2429,Assault,2025-01-27,22:00,0.9
+Delhi,Paharganj,28.6447,77.212,Snatching,2025-01-26,10:45,0.8
+Delhi,Connaught Place,28.6333,77.2197,Robbery,2025-01-26,00:30,1
+Delhi,Chandni Chowk,28.6566,77.2414,Vehicle Theft,2025-01-26,05:00,0.9
+Delhi,Karol Bagh,28.6513,77.1914,Burglary,2025-01-26,02:15,0.8
+Delhi,Nehru Place,28.5493,77.2503,Fighting,2025-01-26,18:30,0.8
+Delhi,Saket,28.5286,77.2189,Snatching,2025-01-26,20:00,0.8
+Delhi,Hauz Khas Village,28.5541,77.1944,Drug Peddling,2025-01-26,22:30,0.8
+Delhi,New Delhi Railway Station,28.6429,77.2203,Theft,2025-01-26,07:45,0.7
+Delhi,Anand Vihar ISBT,28.6498,77.3157,Assault,2025-01-26,21:15,0.9
+Delhi,Okhla Industrial Area,28.5378,77.2884,Abuse,2025-01-26,15:00,0.6
+Delhi,Rohini,28.7144,77.1003,Vandalism,2025-01-26,23:00,0.5
+Delhi,Dwarka,28.5925,77.0464,Harassment,2025-01-26,19:30,0.7
+Delhi,Paharganj,28.6447,77.212,Snatching,2025-01-26,10:45,0.8
+Delhi,Lajpat Nagar,28.568,77.2429,Assault,2025-01-27,22:00,0.9
 Delhi,Greater Kailash,28.5498,77.2347,Fighting,2025-01-27,23:30,0.8
-Delhi,Vasant Kunj,28.5264,77.1560,Robbery,2025-01-27,01:15,1.0
+Delhi,Vasant Kunj,28.5264,77.156,Robbery,2025-01-27,01:15,1
+Delhi,Mayur Vihar,28.6085,77.2951,Pickpocketing,2025-01-27,12:15,0.6
+Delhi,Pitampura,28.7003,77.1434,Theft,2025-01-27,14:45,0.7
+Delhi,Tilak Nagar,28.6371,77.0993,Vehicle Theft,2025-01-27,03:45,0.9
+Delhi,Laxmi Nagar,28.6348,77.2723,Harassment,2025-01-27,18:45,0.7
+Delhi,Mukherjee Nagar,28.7079,77.2059,Snatching,2025-01-27,16:30,0.8
+Delhi,Chanakyapuri,28.5968,77.1875,Burglary,2025-01-27,02:00,0.8
+Delhi,Mehrauli,28.5206,77.1815,Theft,2025-01-27,11:00,0.7
+Delhi,Lajpat Nagar,28.568,77.2429,Assault,2025-01-27,22:00,0.9
+Delhi,Greater Kailash,28.5498,77.2347,Fighting,2025-01-27,23:30,0.8
+Delhi,Vasant Kunj,28.5264,77.156,Robbery,2025-01-27,01:15,1
 Delhi,Mayur Vihar,28.6085,77.2951,Pickpocketing,2025-01-27,12:15,0.6
 Delhi,Pitampura,28.7003,77.1434,Theft,2025-01-27,14:45,0.7
 Delhi,Tilak Nagar,28.6371,77.0993,Vehicle Theft,2025-01-27,03:45,0.9

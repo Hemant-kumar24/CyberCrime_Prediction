@@ -5,6 +5,7 @@ import isBetween from "dayjs/plugin/isBetween";
 import api from "../services/api";
 import DashboardSidebar from "../components/DashboardSidebar";
 import { mockDashboardData } from "../data/mockDashboardData";
+import { useAuth } from "../context/AuthContext";
 
 dayjs.extend(isBetween);
 
@@ -24,6 +25,7 @@ const DASHBOARD_LINKS = [
 ];
 
 const Dashboard = () => {
+  const { user, logout } = useAuth();
   const [data, setData] = useState(mockDashboardData);
   const [error, setError] = useState("");
   const [isSyncing, setIsSyncing] = useState(false);
@@ -56,30 +58,22 @@ const Dashboard = () => {
       setData((prev) => ({
         ...prev,
         metrics: response.data?.metrics ?? prev.metrics,
-        alerts: response.data?.upcomingAlerts
-          ? response.data.upcomingAlerts.map((alert, index) => ({
-              id: alert.id ?? `api-alert-${index}`,
-              message: alert.message,
-              severity: alert.severity ?? "medium",
-              timestamp: alert.timestamp ?? new Date().toISOString(),
-            }))
-          : prev.alerts,
-        clusters: response.data?.hotspots
-          ? prev.clusters.map((cluster, index) => {
-              const apiHotspot = response.data.hotspots[index];
-              if (!apiHotspot) return cluster;
-              return {
-                ...cluster,
-                label: apiHotspot.name ?? cluster.label,
-                score: apiHotspot.confidence ?? cluster.score,
-              };
-            })
-          : prev.clusters,
+        alerts: response.data?.alerts ?? prev.alerts,
+        clusters: response.data?.clusters ?? prev.clusters,
+        hotspots: response.data?.hotspots ?? prev.hotspots,
+        incidents: response.data?.incidents ?? prev.incidents,
+        predictions: response.data?.predictions ?? prev.predictions,
+        patrolRoutes: response.data?.patrolRoutes ?? prev.patrolRoutes,
+        safeRoutes: response.data?.safeRoutes ?? prev.safeRoutes,
       }));
       setError("");
     } catch (err) {
-      const message = err.response?.data?.message || "Using cached data; live updates failed to load.";
-      setError(message);
+      if (err.response?.status === 401) {
+        setError("Session expired. Please log in again.");
+      } else {
+        console.warn("Dashboard sync failed; continuing with cached metrics.", err);
+        setError("");
+      }
     } finally {
       setIsSyncing(false);
     }
@@ -300,7 +294,7 @@ const Dashboard = () => {
 
   return (
     <main className="dashboard dashboard-shell">
-      <DashboardSidebar links={DASHBOARD_LINKS} />
+      <DashboardSidebar links={DASHBOARD_LINKS} user={user} onLogout={logout} />
       <section className="dashboard-main">
         <header className="dashboard__header">
           <div>

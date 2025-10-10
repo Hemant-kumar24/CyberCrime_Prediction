@@ -1,9 +1,12 @@
 import { NavLink } from "react-router-dom";
 
-const DashboardSidebar = ({ links }) => {
+const DashboardSidebar = ({ links, user, onLogout }) => {
   return (
     <aside className="dashboard-sidebar">
-      <h2 className="dashboard-sidebar__title">Dashboard Features</h2>
+      <div className="dashboard-sidebar__header">
+        <span className="dashboard-sidebar__brand">Crime Hotspot &amp; Predictive</span>
+        <span className="dashboard-sidebar__welcome">Hi, {user?.name || "Officer"}</span>
+      </div>
       <nav className="dashboard-sidebar__nav" aria-label="Dashboard navigation">
         {links.map((link) => (
           <NavLink
@@ -18,6 +21,9 @@ const DashboardSidebar = ({ links }) => {
           </NavLink>
         ))}
       </nav>
+      <button type="button" className="dashboard-sidebar__logout" onClick={() => onLogout?.()}>
+        Logout
+      </button>
     </aside>
   );
 };

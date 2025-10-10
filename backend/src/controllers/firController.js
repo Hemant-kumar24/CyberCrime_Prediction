@@ -1,97 +1,96 @@
-const path = require("path");
-const fs = require("fs/promises");
 const Papa = require("papaparse");
+const {
+  insertIncident,
+  insertManyIncidents,
+  exportIncidentsToCsv,
+  normaliseCrimeType,
+} = require("../services/incidentService");
 
-const DATASET_PATH = path.join(__dirname, "..", "..", "python", "crime_dataset.csv");
+const sanitizeHeader = (header = "") => header.replace(/^\uFEFF/, "").trim().toLowerCase();
 
-const CSV_HEADERS = ["City", "Area", "lat", "lon", "crime_type", "date", "time", "intensity"];
-
-const normaliseNumber = (value) => {
-  if (value === undefined || value === null || value === "") return "";
-  const parsed = Number.parseFloat(value);
-  return Number.isFinite(parsed) ? parsed : "";
+const PARSE_BASE_OPTIONS = {
+  header: true,
+  dynamicTyping: false,
+  skipEmptyLines: "greedy",
+  transformHeader: sanitizeHeader,
+  transform: (value) => (typeof value === "string" ? value.trim() : value),
 };
 
-const buildRowArray = (entry) =>
-  CSV_HEADERS.map((key) => {
-    if (key === "lat" || key === "lon") {
-      const value = entry[key] ?? "";
-      return value === "" ? "" : Number.parseFloat(value);
-    }
-    if (key === "intensity") {
-      const value = Number.parseFloat(entry[key]);
-      return Number.isFinite(value) ? Number(value.toFixed(3)) : 0.6;
-    }
-    return entry[key] ?? "";
-  });
+const fatalParseError = (error) =>
+  error?.type === "Delimiter" || error?.type === "Quotes" || error?.code === "UndetectableDelimiter";
 
-const appendRowsToDataset = async (rows) => {
-  if (!rows.length) return;
-  const arrays = rows.map(buildRowArray);
-  const csvChunk = Papa.unparse(arrays, { header: false });
-  const prefix = "\n";
-  await fs.appendFile(DATASET_PATH, `${prefix}${csvChunk}`);
+const parseCsvFlexible = (csvText) => {
+  const normalisedText = csvText.replace(/\r\n/g, "\n");
+  const attempts = [
+    { label: "auto", options: {} },
+    { label: "semicolon", options: { delimiter: ";" } },
+    { label: "tab", options: { delimiter: "\t" } },
+    { label: "pipe", options: { delimiter: "|" } },
+  ];
+
+  for (const attempt of attempts) {
+    const parsed = Papa.parse(normalisedText, { ...PARSE_BASE_OPTIONS, ...attempt.options });
+    const fatalErrors = parsed.errors?.filter(fatalParseError) ?? [];
+    if (!fatalErrors.length) {
+      if (parsed.errors?.length) {
+        console.warn(`CSV parsed with minor warnings (${attempt.label})`, parsed.errors);
+      }
+      return parsed;
+    }
+  }
+
+  return Papa.parse(normalisedText.replace(/;/g, ","), { ...PARSE_BASE_OPTIONS, delimiter: "," });
 };
+
+const requiredFields = ["victimAge", "gender", "district", "zone", "street", "colony", "crimeType"];
 
 const createFirEntry = async (req, res) => {
-  const {
-    victimAge,
-    gender,
-    district,
-    zone,
-    street,
-    colony,
-    crimeType,
-    incidentDate,
-    incidentTime,
-    intensity,
-    latitude,
-    longitude,
-  } = req.body ?? {};
-
-  const requiredFields = { victimAge, gender, district, zone, street, colony, crimeType };
-  const missing = Object.entries(requiredFields)
-    .filter(([, value]) => value === undefined || value === null || value === "")
-    .map(([key]) => key);
+  const payload = req.body ?? {};
+  const missing = requiredFields.filter((field) => {
+    const value = payload[field];
+    return value === undefined || value === null || value === "";
+  });
 
   if (missing.length) {
     res.status(400).json({ message: `Missing required fields: ${missing.join(", ")}` });
     return;
   }
 
-  const city = district || "Delhi";
-  const areaParts = [colony, street].filter(Boolean);
-  const area = areaParts.length ? areaParts.join(", ") : zone || "Unknown Area";
-  const date = incidentDate || new Date().toISOString().slice(0, 10);
-  const time = incidentTime || new Date().toISOString().slice(11, 16);
-  const normalizedIntensity = intensity ? Number.parseFloat(intensity) : 0.6;
+  const crimeType = normaliseCrimeType(payload.crimeType);
+  if (!crimeType) {
+    res.status(400).json({ message: "Invalid crime type provided." });
+    return;
+  }
 
-  const csvRow = {
-    City: city,
-    Area: area,
-    lat: normaliseNumber(latitude),
-    lon: normaliseNumber(longitude),
-    crime_type: crimeType,
-    date,
-    time,
-    intensity: Number.isFinite(normalizedIntensity) ? normalizedIntensity : 0.6,
-  };
+  const areaParts = [payload.colony, payload.street].filter(Boolean);
+  const area = areaParts.length ? areaParts.join(", ") : payload.zone || "Unknown Area";
+  const city = payload.district || "Unknown";
 
   try {
-    const csvLine = Papa.unparse([buildRowArray(csvRow)], { header: false });
-    await fs.appendFile(DATASET_PATH, `\n${csvLine}`);
+    const incident = await insertIncident(
+      {
+        ...payload,
+        crimeType,
+        area,
+        city,
+        date: payload.incidentDate || new Date().toISOString().slice(0, 10),
+        time: payload.incidentTime || new Date().toISOString().slice(11, 16),
+        latitude: payload.latitude,
+        longitude: payload.longitude,
+        intensity: payload.intensity,
+        description: payload.description,
+      },
+      { source: "fir-form" }
+    );
+
+    await exportIncidentsToCsv();
 
     res.status(201).json({
       message: "FIR recorded and dataset updated",
-      entry: {
-        ...csvRow,
-        victimAge,
-        gender,
-        zone,
-      },
+      incident: incident.toObject(),
     });
   } catch (error) {
-    console.error("Failed to append FIR to dataset:", error);
+    console.error("Failed to store FIR:", error);
     res.status(500).json({ message: "Failed to record FIR", error: error.message });
   }
 };
@@ -104,40 +103,53 @@ const uploadFirDataset = async (req, res) => {
 
   try {
     const CSVText = req.file.buffer.toString("utf-8");
-    const parsed = Papa.parse(CSVText, {
-      header: true,
-      skipEmptyLines: true,
-      transformHeader: (header) => header.trim().toLowerCase(),
-    });
+    const parsed = parseCsvFlexible(CSVText);
 
-    if (parsed.errors?.length) {
-      res.status(400).json({ message: "Failed to parse CSV file", errors: parsed.errors });
+    const fatalErrors = parsed.errors?.filter(fatalParseError) ?? [];
+    if (fatalErrors.length) {
+      res.status(400).json({
+        message: "Failed to parse CSV file",
+        errors: fatalErrors.map(({ message, row }) => ({ message, row })),
+      });
       return;
     }
 
-    const rows = parsed.data
-      .map((row) => ({
-        City: row.city || row.district || "Unknown",
-        Area: row.area || row.colony || row.street || "Unknown Area",
-        lat: normaliseNumber(row.lat ?? row.latitude),
-        lon: normaliseNumber(row.lon ?? row.longitude),
-        crime_type: row.crime_type || row.offence || "General",
-        date: row.date || new Date().toISOString().slice(0, 10),
-        time: row.time || "00:00",
-        intensity: row.intensity || row.severity || 0.6,
-      }))
-      .filter((row) => row.City && row.Area && row.date);
+    const payloads = parsed.data
+      .map((row) => {
+        const crimeType = normaliseCrimeType(row.crime_type || row.offence || row.category || row.type || "");
+        if (!crimeType) return null;
+        return {
+          crimeType,
+          city: row.city || row.district || row.state || "Unknown",
+          district: row.district,
+          zone: row.zone,
+          street: row.street,
+          colony: row.colony,
+          area: row.area,
+          latitude: row.lat ?? row.latitude ?? row.latitude_deg,
+          longitude: row.lon ?? row.longitude ?? row.longitude_deg,
+          intensity: row.intensity || row.severity || row.weight || 0.6,
+          date: row.date || row.incident_date || row.reported_on || new Date().toISOString().slice(0, 10),
+          time: row.time || row.incident_time || "",
+          description: row.description || row.summary || row.notes,
+          source: "csv-upload",
+          gender: row.gender,
+          victimAge: row.victimAge || row.victim_age,
+        };
+      })
+      .filter(Boolean);
 
-    if (!rows.length) {
+    if (!payloads.length) {
       res.status(400).json({ message: "No valid rows detected in uploaded CSV" });
       return;
     }
 
-    await appendRowsToDataset(rows);
+    const result = await insertManyIncidents(payloads, { source: "csv-upload" });
+    await exportIncidentsToCsv();
 
     res.status(201).json({
-      message: `${rows.length} records ingested into dataset`,
-      totalRows: rows.length,
+      message: `${result.insertedCount} records ingested into dataset`,
+      totalRows: result.insertedCount,
     });
   } catch (error) {
     console.error("CSV ingest failed:", error);
