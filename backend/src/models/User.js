@@ -1,3 +1,4 @@
+//schema for user
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 
